@@ -1,0 +1,39 @@
+/** @format */
+
+:root {
+  --font: "Poppins";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  padding: 12px 34px;
+}
+
+.d-none {
+  display: none;
+}
+
+.main_container .main_body {
+  background-image: url(../assets/images/bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_container .main_body .player_information .player_wraper .player_head {
+  background-color: lightslategrey;
+}
+
+@media (max-width: 480px) {
+  .main_container {
+    display: flex;
+  }
+}
