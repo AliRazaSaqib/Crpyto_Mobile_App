@@ -1,0 +1,287 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Crypto_mobile_app</title>
+    <meta name="description" content="Crypto_mobile_app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- font-family cdn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styleSheet/style.css" />
+  </head>
+  <body>
+    <div class="main_container d-none">
+      <div class="main_body">
+        <div class="player_information">
+          <div class="player_wraper">
+            <div class="head">
+              <img src="./assets/icons/avatar.png" height="32px" width="32px" />
+              <div class="player">Player 1</div>
+            </div>
+            <div class="body"></div>
+          </div>
+          <div class="player_wraper">
+            <div class="head">
+              <img src="./assets/icons/avatar.png" height="32px" width="32px" />
+              <div class="player">Player 2</div>
+            </div>
+            <div class="body"></div>
+          </div>
+        </div>
+        <div class="dice">
+          <img src="./assets/images/dice.png" />
+          <img src="./assets/images/dice.png" />
+        </div>
+      </div>
+
+      <!-- all popups code write here -->
+
+      <div class="hold_popups">
+        <!-- for signup -->
+        <div class="container d-none" id="signup">
+          <div class="logo">
+            <div>SIGN UP</div>
+            <div>X</div>
+          </div>
+          <div class="login-item">
+            <form action="" method="post" class="form form-login">
+              <div class="form-field">
+                <label class="email" for="login-username"
+                  ><span class="hidden">Email</span></label
+                >
+                <input
+                  id="login-email"
+                  type="email"
+                  class="form-input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="user" for="login-username"
+                  ><span class="hidden">Username</span></label
+                >
+                <input
+                  id="login-username"
+                  type="text"
+                  class="form-input"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="lock" for="login-password"
+                  ><span class="hidden">Password</span></label
+                >
+                <input
+                  id="login-password"
+                  type="password"
+                  class="form-input"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="submit"
+                  value="Log in"
+                  onclick="window.location.href ='./signin.html'"
+                />
+              </div>
+            </form>
+            <div class="already_account">
+              Already have an account?
+              <span onclick="window.location.href ='./signin.html'"
+                >Sign In</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- for signin -->
+        <div class="container d-none" id="signin">
+          <div class="logo">
+            <div>SIGN IN</div>
+            <div>X</div>
+          </div>
+          <div class="login-item">
+            <form action="" method="post" class="form form-login">
+              <div class="form-field">
+                <label class="user" for="login-username"
+                  ><span class="hidden">Username</span></label
+                >
+                <input
+                  id="login-username"
+                  type="text"
+                  class="form-input"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="lock" for="login-password"
+                  ><span class="hidden">Password</span></label
+                >
+                <input
+                  id="login-password"
+                  type="password"
+                  class="form-input"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="submit"
+                  value="Log in"
+                  class="btn"
+                  onclick="window.location.href ='./complete.html'"
+                />
+              </div>
+            </form>
+            <div class="forget">
+              <div onclick="window.location.href ='./signup.html'">SIGN UP</div>
+              <div onclick="window.location.href ='./forget.html'">
+                Forget Password?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- for forget pass -->
+        <div class="container d-none" id="forget">
+          <div class="logo">
+            <div>FORGET</div>
+            <div>X</div>
+          </div>
+          <div class="login-item">
+            <form action="" method="post" class="form form-login">
+              <div class="form-field">
+                <label class="email" for="login-username"
+                  ><span class="hidden">Email</span></label
+                >
+                <input
+                  id="login-email"
+                  type="email"
+                  class="form-input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="submit"
+                  value="FORGET"
+                  onclick="window.location.href ='./signin.html'"
+                />
+              </div>
+            </form>
+            <div class="forget">
+              <div onclick="window.location.href ='./signin.html'">LOGIN</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- for complete popup -->
+        <div class="container d-none" id="complete">
+          <div class="logo game">
+            <div>COMPLETE</div>
+            <div onclick="handleClose(this)">X</div>
+          </div>
+          <div class="play_game">
+            <div class="complete">
+              <img src="./assets/icons/star.png" />
+              <img src="./assets/icons/star.png" />
+              <img src="./assets/icons/star.png" />
+            </div>
+            <div class="score_pill">
+              <div>SCORE</div>
+              <p>800,0000000</p>
+            </div>
+            <div class="show_more_details">
+              <div>
+                <div>Time</div>
+                <div class="time">02:56</div>
+              </div>
+              <div>
+                <div>Combo</div>
+                <div class="combo">02:56</div>
+              </div>
+              <div>
+                <div>Gold</div>
+                <div class="gold">02:56</div>
+              </div>
+            </div>
+            <button class="play">PLAY</button>
+          </div>
+        </div>
+
+        <!-- for stage lock -->
+        <div class="container" id="stage">
+          <div class="close_window" onclick="handleStageClose(this)">X</div>
+          <div class="play_game lock_game_stage">
+            <div class="complete lockstage">
+              <img src="./assets/icons/lock.png" />
+              <h3>STAGE 11</h3>
+            </div>
+          </div>
+          <div>
+            <div class="lock_stage">
+              <p>The Stage is locked</p>
+            </div>
+
+            <button class="play">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("close", clickOutside);
+      const showComplete = document.getElementById("complete");
+      const getSignin = document.getElementById("signin");
+      const getSignup = document.getElementById("signup");
+      const getForget = document.getElementById("forget");
+      const stageLock = document.getElementById("stage");
+
+      function clickOutside() {
+        showComplete.classList.add("d-none");
+        getSignin.classList.add("d-none");
+        getForget.classList.add("d-none");
+        getSignup.classList.add("d-none");
+        stageLock.classList.add("d-none");
+      }
+
+      function handleClose() {
+        showComplete.classList.add("d-none");
+        getSignin.classList.add("d-none");
+        getForget.classList.add("d-none");
+        stageLock.classList.add("d-none");
+        getSignup.classList.add("d-none");
+      }
+
+      function handleStageClose() {
+        stageLock.classList.add("d-none");
+        showComplete.classList.add("d-none");
+        getSignin.classList.add("d-none");
+        getForget.classList.add("d-none");
+        getSignup.classList.add("d-none");
+      }
+    </script>
+  </body>
+</html>
