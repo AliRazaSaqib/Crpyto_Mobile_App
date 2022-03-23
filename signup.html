@@ -1,0 +1,95 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Crypto_mobile_app</title>
+    <meta name="description" content="Crypto_mobile_app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- font-family cdn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./styleSheet/style.css" />
+  </head>
+  <body>
+    <div class="main_container d-none">
+      <div class="main_body content">
+        <div class="container">
+          <div class="logo">
+            <div>SIGN UP</div>
+            <div>X</div>
+          </div>
+          <div class="login-item">
+            <form action="" method="post" class="form form-login">
+              <div class="form-field">
+                <label class="email" for="login-username"
+                  ><span class="hidden">Email</span></label
+                >
+                <input
+                  id="login-email"
+                  type="email"
+                  class="form-input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="user" for="login-username"
+                  ><span class="hidden">Username</span></label
+                >
+                <input
+                  id="login-username"
+                  type="text"
+                  class="form-input"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="lock" for="login-password"
+                  ><span class="hidden">Password</span></label
+                >
+                <input
+                  id="login-password"
+                  type="password"
+                  class="form-input"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="submit"
+                  value="Log in"
+                  onclick="window.location.href ='./signin.html'"
+                />
+              </div>
+            </form>
+            <div class="already_account">
+              Already have an account?
+              <span onclick="window.location.href ='./signin.html'"
+                >Sign In</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+  </body>
+</html>

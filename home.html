@@ -46,157 +46,6 @@
       <!-- all popups code write here -->
 
       <div class="hold_popups">
-        <!-- for signup -->
-        <div class="container d-none" id="signup">
-          <div class="logo">
-            <div>SIGN UP</div>
-            <div>X</div>
-          </div>
-          <div class="login-item">
-            <form action="" method="post" class="form form-login">
-              <div class="form-field">
-                <label class="email" for="login-username"
-                  ><span class="hidden">Email</span></label
-                >
-                <input
-                  id="login-email"
-                  type="email"
-                  class="form-input"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label class="user" for="login-username"
-                  ><span class="hidden">Username</span></label
-                >
-                <input
-                  id="login-username"
-                  type="text"
-                  class="form-input"
-                  placeholder="Username"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label class="lock" for="login-password"
-                  ><span class="hidden">Password</span></label
-                >
-                <input
-                  id="login-password"
-                  type="password"
-                  class="form-input"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <input
-                  type="submit"
-                  value="Log in"
-                  onclick="window.location.href ='./signin.html'"
-                />
-              </div>
-            </form>
-            <div class="already_account">
-              Already have an account?
-              <span onclick="window.location.href ='./signin.html'"
-                >Sign In</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- for signin -->
-        <div class="container d-none" id="signin">
-          <div class="logo">
-            <div>SIGN IN</div>
-            <div>X</div>
-          </div>
-          <div class="login-item">
-            <form action="" method="post" class="form form-login">
-              <div class="form-field">
-                <label class="user" for="login-username"
-                  ><span class="hidden">Username</span></label
-                >
-                <input
-                  id="login-username"
-                  type="text"
-                  class="form-input"
-                  placeholder="Username"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label class="lock" for="login-password"
-                  ><span class="hidden">Password</span></label
-                >
-                <input
-                  id="login-password"
-                  type="password"
-                  class="form-input"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <input
-                  type="submit"
-                  value="Log in"
-                  class="btn"
-                  onclick="window.location.href ='./complete.html'"
-                />
-              </div>
-            </form>
-            <div class="forget">
-              <div onclick="window.location.href ='./signup.html'">SIGN UP</div>
-              <div onclick="window.location.href ='./forget.html'">
-                Forget Password?
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- for forget pass -->
-        <div class="container d-none" id="forget">
-          <div class="logo">
-            <div>FORGET</div>
-            <div>X</div>
-          </div>
-          <div class="login-item">
-            <form action="" method="post" class="form form-login">
-              <div class="form-field">
-                <label class="email" for="login-username"
-                  ><span class="hidden">Email</span></label
-                >
-                <input
-                  id="login-email"
-                  type="email"
-                  class="form-input"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <input
-                  type="submit"
-                  value="FORGET"
-                  onclick="window.location.href ='./signin.html'"
-                />
-              </div>
-            </form>
-            <div class="forget">
-              <div onclick="window.location.href ='./signin.html'">LOGIN</div>
-            </div>
-          </div>
-        </div>
-
         <!-- for complete popup -->
         <div class="container d-none" id="complete">
           <div class="logo game">
@@ -254,33 +103,21 @@
     <script>
       window.addEventListener("close", clickOutside);
       const showComplete = document.getElementById("complete");
-      const getSignin = document.getElementById("signin");
-      const getSignup = document.getElementById("signup");
-      const getForget = document.getElementById("forget");
       const stageLock = document.getElementById("stage");
 
       function clickOutside() {
         showComplete.classList.add("d-none");
-        getSignin.classList.add("d-none");
-        getForget.classList.add("d-none");
-        getSignup.classList.add("d-none");
         stageLock.classList.add("d-none");
       }
 
       function handleClose() {
         showComplete.classList.add("d-none");
-        getSignin.classList.add("d-none");
-        getForget.classList.add("d-none");
         stageLock.classList.add("d-none");
-        getSignup.classList.add("d-none");
       }
 
       function handleStageClose() {
         stageLock.classList.add("d-none");
         showComplete.classList.add("d-none");
-        getSignin.classList.add("d-none");
-        getForget.classList.add("d-none");
-        getSignup.classList.add("d-none");
       }
     </script>
   </body>
