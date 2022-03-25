@@ -1,0 +1,59 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Crypto_mobile_app</title>
+    <meta name="description" content="Crypto_mobile_app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- font-family cdn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styleSheet/style.css" />
+  </head>
+  <body>
+    <div class="main_container d-none">
+      <div class="main_body content">
+        <div class="shop_container">
+          <div class="close_btn">X</div>
+          <div class="currency">
+            <div class="choose_c">Choose Currency</div>
+            <img src="./assets/icons/currency.png" height="48px" width="48px" />
+          </div>
+
+          <!-- body start from here -->
+          <div class="coin_select_body">
+            <div class="coin_main_wraper">
+              <div class="eth">
+                <div class="eth_coin">
+                  <img src="./assets/icons/etc.png" />
+                  <h3>Ethereum</h3>
+                </div>
+                <button onclick="window.location.href ='./home.html'">
+                  Select
+                </button>
+              </div>
+              <div class="eth">
+                <div class="eth_coin">
+                  <img src="./assets/icons/btc.png" />
+                  <h3>Bitcoin</h3>
+                </div>
+                <button onclick="window.location.href ='./home.html'">
+                  Select
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/common.js"></script>
+  </body>
+</html>

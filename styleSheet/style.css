@@ -17,7 +17,7 @@ body {
   display: none;
 }
 
-.main_container {
+.shop_container {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
@@ -348,7 +348,7 @@ input {
 .container .lockstage h3 {
   font-family: var(--font);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 24px;
   color: white;
 }
 
@@ -391,14 +391,14 @@ input {
   text-align: center;
 }
 
-.main_container .start_page .dice {
+/* .main_container .start_page .dice {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 24px;
   flex-wrap: wrap;
-}
+} */
 
 .main_container .start_page .dice .start_buttons {
   display: flex;
@@ -488,8 +488,9 @@ input {
 }
 
 .active {
-  background-color: #9a9a9a;
+  background-color: #26db94;
   color: black;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 }
 
 .close_btn {
@@ -541,11 +542,169 @@ input {
   margin-top: 12px;
 }
 
-.gt-collection-listfilter {
-  max-width: calc(100vw - 80px);
+.container .you_lose p {
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 500;
 }
+
+.container .you_lose .lose_gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .you_lose .lose_gold div:first-child {
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 500;
+  color: orange;
+}
+
+hr {
+  border: 1px solid lightgray;
+}
+
+.footer_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.footer_items div {
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  padding: 8px;
+  height: 68px;
+  width: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_container .home_pause {
+  position: absolute;
+  bottom: 24px;
+  z-index: 999;
+  right: 24px;
+}
+
+.main_container .main_body .shop_container .currency {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 12px;
+}
+
+.main_container .main_body .shop_container .currency .choose_c {
+  font-size: 18px;
+  font-family: var(--font);
+  font-weight: 600;
+}
+
+.main_container .main_body .coin_select_body {
+  background-color: whitesmoke;
+  /* height: 254px;
+  overflow: auto; */
+}
+
+.main_container .main_body .shop_container .coin_select_body .coin_main_wraper {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.main_container
+  .main_body
+  .shop_container
+  .coin_select_body
+  .coin_main_wraper
+  .eth:not(:first-child) {
+  margin-top: 34px;
+}
+
+.main_container
+  .main_body
+  .shop_container
+  .coin_select_body
+  .coin_main_wraper
+  .eth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_container
+  .main_body
+  .shop_container
+  .coin_select_body
+  .coin_main_wraper
+  .eth
+  .eth_coin {
+  display: flex;
+  align-items: center;
+}
+
+.main_container
+  .main_body
+  .shop_container
+  .coin_select_body
+  .coin_main_wraper
+  .eth
+  button {
+  background-color: #26db94;
+  border: unset;
+  outline: unset;
+  width: 80px;
+  height: 32px;
+  color: black;
+  font-size: 14px;
+  font-family: var(--font);
+  font-weight: 500;
+}
+
+.main_container
+  .main_body
+  .shop_container
+  .coin_select_body
+  .coin_main_wraper
+  .eth
+  .eth_coin
+  h3 {
+  padding-left: 12px;
+  font-size: 14px;
+  font-family: var(--font);
+  font-weight: 600;
+}
+
+.main_container .main_body .shop_icon {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 999;
+}
+
 @media (max-width: 480px) {
   .main_container {
     display: block;
+  }
+}
+@media (max-width: 400px) {
+  .main_container .main_body .player_information .player_wraper .head {
+    max-width: 100px;
+  }
+  .main_container .main_body .player_information .player_wraper .head .player {
+    font-size: 12px;
+  }
+  .main_container .main_body .player_information .player_wraper .body {
+    width: 124px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main_container .main_body .player_information {
+    justify-content: space-between;
   }
 }
