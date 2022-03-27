@@ -172,54 +172,6 @@
           </div>
         </div>
 
-        <!-- for stage lock -->
-        <div class="container d-none" id="stage">
-          <div class="close_window" onclick="handleStageClose(this)">X</div>
-          <div class="play_game lock_game_stage">
-            <div class="complete lockstage">
-              <img src="./assets/icons/lock.png" />
-              <h3>STAGE 11</h3>
-            </div>
-          </div>
-          <div>
-            <div class="lock_stage">
-              <p>The Stage is locked</p>
-            </div>
-
-            <button class="play">OK</button>
-          </div>
-        </div>
-
-        <!-- for you loose popup -->
-        <div class="container d-none" id="lose">
-          <div class="close_window" onclick="handleLoseClose(this)">X</div>
-          <div class="play_game lock_game_stage">
-            <div class="complete lockstage">
-              <h3>YOU LOSE</h3>
-              <img src="./assets/icons/skull.png" />
-            </div>
-          </div>
-          <div>
-            <div class="lock_stage you_lose">
-              <p>GOLD</p>
-              <div class="lose_gold">
-                <div>10</div>
-                <img src="./assets/icons/gold.png" height="28px" width="28px" />
-              </div>
-            </div>
-            <hr />
-
-            <div class="footer_items">
-              <div class="load">
-                <img src="./assets/icons/home.png" width="38px" height="38px" />
-              </div>
-              <div class="home">
-                <img src="./assets/icons/load.png" width="38px" height="38px" />
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- for pause screen popup -->
         <div class="container d-none" id="pause">
           <div class="close_window" onclick="handlePauseClose(this)">X</div>
@@ -262,48 +214,31 @@
     </div>
 
     <script>
-      window.addEventListener("close", clickOutside);
       const showComplete = document.getElementById("complete");
-      const stageLock = document.getElementById("stage");
       const pauseBtn = document.getElementById("pause");
-      const loseBtn = document.getElementById("lose");
 
       function clickOutside() {
         showComplete.classList.add("d-none");
-        stageLock.classList.add("d-none");
-
-        loseBtn.classList.add("d-none");
         pauseBtn.classList.add("d-none");
       }
 
       function handleClose() {
         showComplete.classList.add("d-none");
-        stageLock.classList.add("d-none");
-        loseBtn.classList.add("d-none");
         pauseBtn.classList.add("d-none");
       }
 
       function handleStageClose() {
         showComplete.classList.add("d-none");
-        stageLock.classList.add("d-none");
-
-        loseBtn.classList.add("d-none");
         pauseBtn.classList.add("d-none");
       }
 
       function handleLoseClose() {
         showComplete.classList.add("d-none");
-        stageLock.classList.add("d-none");
-
-        loseBtn.classList.add("d-none");
         pauseBtn.classList.add("d-none");
       }
 
       function handlePauseClose() {
         showComplete.classList.add("d-none");
-        stageLock.classList.add("d-none");
-
-        loseBtn.classList.add("d-none");
         pauseBtn.classList.add("d-none");
       }
 
@@ -315,53 +250,7 @@
         showComplete.classList.remove("d-none");
       }
     </script>
-    <script>
-      filterSelection("coin");
-      function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("filterDiv");
-        for (i = 0; i < x.length; i++) {
-          w3RemoveClass(x[i], "show");
-          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-      }
-
-      function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-          }
-        }
-      }
-
-      function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-          }
-        }
-        element.className = arr1.join(" ");
-      }
-
-      // Add active class to the current button (highlight it)
-      var btnContainer = document.getElementById("myBtnContainer");
-      var btns = btnContainer.getElementsByClassName("filter_btn");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-        });
-      }
-    </script>
 
     <script src="./js/roll.js"></script>
-    <script src="./js/common.js"></script>
   </body>
 </html>
